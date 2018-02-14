@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
 		
-	char date[10];
+	char date[100];
 	while(scanf("%s",date)!=EOF){
 		
 		int yearStart = 0,yearEnd = 0,monStart = 0,monEnd = 0,dayStart = 0,dayEnd = 0;
@@ -29,19 +29,23 @@ int main(){
 
 		int t;
 
-		for(int j = 0;j<=yearEnd;j++){
+		for(int j = yearStart;j<=yearEnd;j++){
 			t = date[j] - '0';
 			for(int k = j;k<yearEnd;k++)
 				t*=10;
 			ynum+=t;
 		}
-		if(ynum%4==0)
+
+		if(ynum%4==0&&ynum%100!= 0||ynum%400==0)
 			flag = true;
+
 		for(int j = monStart;j<=monEnd;j++){
 			t = date[j] - '0';
-			for(int k = j;k<monEnd;k--)
+			//printf("t:%d\n",t);
+			for(int k = j;k<monEnd;k++)
 				t*=10;
-			mnum+=t;
+			//printf("t:%d\n",t);
+			mnum += t;
 		}
 		
 		for(int j = dayStart;j<=dayEnd;j++){
@@ -66,7 +70,8 @@ int main(){
 		}
 		//printf("%d %d %d\n",ynum,mnum,dnum);
 		result += dnum;
-		printf("%d\n",result);
+		cout<<result<<endl;
+		//printf("%d\n",result);
 	}
 
 
