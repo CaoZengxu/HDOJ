@@ -1,1 +1,9 @@
 *.exe
+/2040 super stairs/*.filters
+/2040 super stairs/*.vcxproj
+/2040 super stairs/Debug/*.log
+/2040 super stairs/Debug/*.obj
+/2040 super stairs/Debug/*.idb
+/2040 super stairs/Debug/*.pdb
+/2040 super stairs/Debug/2040 sup.DAF52DD3.tlog/*.lastbuildstate
+/2040 super stairs/Debug/2040 sup.DAF52DD3.tlog/*.tlog
