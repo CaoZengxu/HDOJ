@@ -12,5 +12,6 @@ int main() {
 	while (cin >> n) {
 		cout << num[n] << endl;
 	}
+
 	return 0;
 }
