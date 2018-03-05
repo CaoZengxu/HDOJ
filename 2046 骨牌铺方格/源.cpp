@@ -10,7 +10,7 @@ int main() {
 		num[i] = num[i - 1] + num[i - 2];
 	
 	while (cin >> n) {
-		cout << num[n] << endl£»
+		cout << num[n] << endl;
 	}
 	return 0;
 }
