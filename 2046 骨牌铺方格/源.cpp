@@ -4,6 +4,7 @@ int main() {
 	int n;
 	int a, b;
 	long long num[53];
+
 	num[1] = 1;
 	num[2] = 2;
 	for (int i = 3; i < 53; i++)
