@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 int main(){
 	int N,R;
@@ -10,26 +11,13 @@ int main(){
 			N = -N;
 			cout<<'-';
 		}
-
+		int i= 0;
+		string ans = "";
 		while(N>0){
-			if((N/t) >= R){
-				t *= R;
-			}else{
-				
-				if(N>t){
-					cout<<s[(N/t)];
-					N = N%t;
-					
-				}else if(N<R){
-
-					cout<<s[N];
-					N = 0;
-				}
-				t = t/R;
-			}
-
+			ans = s[N%R] + ans;
+			N/=R;
 		}
-		cout<<endl;
+		cout<<ans<<endl;
 
 	}
 	return 0;
